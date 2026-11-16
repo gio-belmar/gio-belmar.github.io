@@ -1,6 +1,6 @@
-# Gio · Curriculum (borrador v4)
+# Gio · Curriculum (borrador v5)
 
-> 16/11/2026 · v4. Base de contenido para la web (repo `gio-belmar/CV_02`).
+> 16/11/2026 · v5. Base de contenido para la web (repo `gio-belmar/CV_02`).
 > Fuentes: lo que me contaste, tu primer CV (`CV_01`), tu Drive y búsquedas en internet.
 > Leyenda: ✅ confirmado · 🔎 sacado de CV_01 / archivos · ❓ falta confirmar · 📊 propuesta mía, ajústala
 
@@ -11,7 +11,7 @@
 - **Nombre en la web:** Gio · alias **tvm** 🔎 (en CV_01 aparece "Gio / tvm")
 - **Nombre completo:** Giorgio Belmar Velásquez ✅
 - **Ciudad:** Valdivia, Chile ✅
-- **Celular / WhatsApp:** +56 9 5287 5646 ✅ (en CV_01 iba oculto tras un botón "mostrar número"; ¿lo mantenemos así?)
+- **Celular / WhatsApp:** +56 9 5287 5646 ✅ · ❓ ¿se muestra directo o tras el botón "mostrar número" como en CV_01?
 - **Correo:** giorgiobelmar@gmail.com ✅
 - **Instagram:** [@tvmsito](https://www.instagram.com/tvmsito/) ✅
 - **LinkedIn:** [Giorgio Belmar Velásquez](https://www.linkedin.com/in/giorgio-belmar-vel%C3%A1squez-a1716521b/) 🔎
@@ -92,76 +92,94 @@ Edición 1 (mayo–junio 2026) y Edición Primavera (6 de noviembre de 2026: Cam
 
 - **Ingeniería Civil Acústica** · Universidad Austral de Chile · 2022 – 2027 (5.º año, egreso estimado 2027)
 
-## 6. Habilidades y software 📊
+## 6. Habilidades y software ✅
 
-> Porcentajes propuestos por mí según lo que me contaste. **Corrígelos.**
+> Niveles indicados por Gio (escala de 10 en 10).
 
 ### Audio en vivo
 | Herramienta | Nivel |
 |---|---|
-| Behringer X32 | 75% |
-| Midas M32 | 75% |
-| Sistemas PA y microfonía | 65% |
+| Sistemas PA y microfonía | 80% |
+| Behringer X32 | 70% |
+| Midas M32 | 70% |
 
 ### DAW y producción musical
 | Herramienta | Nivel |
 |---|---|
-| Ableton Live (principal, desde 2020) | 85% |
-| Reaper | 60% |
+| Ableton Live (principal, desde 2020) | 100% |
+| Reaper | 80% |
 
 ### Acústica y medición
 | Herramienta | Nivel |
 |---|---|
-| REW (Room EQ Wizard) | 65% |
-| EASE | 55% |
+| EASE | 80% |
+| REW (Room EQ Wizard) | 60% |
 
 ### Visuales en vivo, pantallas y mapping
 | Herramienta | Nivel |
 |---|---|
-| Resolume Arena | 85% |
+| Resolume Arena | 80% |
 | Procesadores LED Novastar (VX600 / VX1000) | 80% |
-| TouchDesigner | 60% |
-| MadMapper | 60% |
+| TouchDesigner | 30% |
+| MadMapper | 20% |
 
 ### Broadcast y streaming
 | Herramienta | Nivel |
 |---|---|
-| OBS Studio | 80% |
-| Dirección de cámaras, transmisores inalámbricos, teleprompter | 75% |
+| OBS Studio | 100% |
+| Dirección de cámaras, transmisores inalámbricos, teleprompter | 90% |
 
 ### Edición, post y 3D
 | Herramienta | Nivel |
 |---|---|
-| DaVinci Resolve (principal) | 80% |
-| Blender (principal) | 75% |
-| Premiere Pro (experiencia previa) | 60% |
-| After Effects (experiencia previa) | 55% |
+| DaVinci Resolve (principal) | 90% |
+| Blender (principal) | 90% |
+| Premiere Pro (experiencia previa) | 80% |
+| After Effects (experiencia previa) | 80% |
 
 ### Diseño gráfico
 | Herramienta | Nivel |
 |---|---|
-| Affinity (uso actual para todo) | 85% |
-| Photoshop (experiencia previa) | 70% |
-| Illustrator (experiencia previa) | 65% |
+| Affinity (uso actual) | 90% |
+| Photoshop | 90% |
+| Illustrator | 50% |
 
-### Dibujo técnico y modelado arquitectónico
+### Dibujo técnico y arquitectura
 | Herramienta | Nivel |
 |---|---|
-| AutoCAD (profesional) | 80% |
-| SketchUp (profesional) | 70% |
-| ArchiCAD (uso no profesional, previo) | 40% |
+| AutoCAD | 100% |
+| SketchUp | 100% |
+| ArchiCAD (no profesional) | 30% |
 
-### IA y desarrollo
+### IA
 | Herramienta | Nivel |
 |---|---|
-| **Claude Code** (principal) | 85% |
-| ChatGPT | 75% |
-| OpenCode | 60% |
+| **Claude Code** (principal) | 90% |
+| ChatGPT | 90% |
+| OpenCode | 80% |
+| DeepSeek | 80% |
 | NotebookLM | 60% |
-| DeepSeek | 55% |
-| GitHub Copilot | 55% |
-| HTML / CSS / React + GitHub Pages (con IA) | 60% |
-| Google Sheets / Apps Script | 60% |
+| GitHub Copilot | 50% |
+
+### Desarrollo web
+| Herramienta | Nivel |
+|---|---|
+| HTML / CSS / React (con IA) | 90% |
+| GitHub / GitHub Pages / Actions | 90% |
+| Google Sheets / Apps Script | 70% |
+
+### Redes sociales
+| Plataforma | Nivel |
+|---|---|
+| Instagram | 90% |
+| YouTube | 90% |
+| TikTok | 40% |
+
+### Ofimática
+| Herramienta | Nivel |
+|---|---|
+| LaTeX | 80% |
+| Microsoft Office (Word, Excel, PowerPoint) | 80% |
 
 ### Otras habilidades
 - Montaje de estructuras Layher, carga y logística de equipos
@@ -181,7 +199,6 @@ Edición 1 (mayo–junio 2026) y Edición Primavera (6 de noviembre de 2026: Cam
 ## Lo que falta
 
 **Para confirmar**
-- [ ] Porcentajes de software (con la página de niveles)
 - [ ] KLANG en Masquerade: fecha y material
 - [ ] Links del sitio CEEICA (repo y web)
 - [ ] ¿Qué SoundCloud va en la web?
