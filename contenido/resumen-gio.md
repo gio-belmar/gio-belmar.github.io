@@ -11,7 +11,7 @@
 - **Nombre en la web:** Gio · alias **tvm** 🔎 (en CV_01 aparece "Gio / tvm")
 - **Nombre completo:** Giorgio Belmar Velásquez ✅
 - **Ciudad:** Valdivia, Chile ✅
-- **Celular / WhatsApp:** +56 9 5287 5646 ✅ · ❓ ¿se muestra directo o tras el botón "mostrar número" como en CV_01?
+- **Celular / WhatsApp:** +56 9 5287 5646 ✅ · se muestra tras un botón "Mostrar número" (decidido)
 - **Correo:** giorgiobelmar@gmail.com ✅
 - **Instagram:** [@tvmsito](https://www.instagram.com/tvmsito/) ✅
 - **LinkedIn:** [Giorgio Belmar Velásquez](https://www.linkedin.com/in/giorgio-belmar-vel%C3%A1squez-a1716521b/) 🔎
@@ -80,7 +80,7 @@ Edición 1 (mayo–junio 2026) y Edición Primavera (6 de noviembre de 2026: Cam
 **Con página propia**
 - **Festival LOOK AT FLOWERS:** producción de eventos, identidad visual y web (ver Experiencia).
 - **Sitio web CEEICA:** página del Centro de Estudiantes de Ingeniería Civil Acústica, con buscador rápido de contenidos, publicada en GitHub Pages. ❓ falta el link al repo y al sitio
-- **Visuales KLANG en Masquerade** ✅ · ❓ ¿tienes fotos o videos? ¿Fecha?
+- **Visuales KLANG en Masquerade** · 31/10/2026 ✅ · propuesta visual y herramientas propias · hay fotos, videos y archivo del proyecto (falta subirlos) · ❓ ¿fue a través de Obando o directo con KLANG?
 
 **En desarrollo**
 - **Cortometraje:** grabado con equipo de la UACh y editado en DaVinci Resolve, con modelado 3D en Blender. Casi terminado; se publicará en YouTube.
@@ -199,12 +199,11 @@ Edición 1 (mayo–junio 2026) y Edición Primavera (6 de noviembre de 2026: Cam
 ## Lo que falta
 
 **Para confirmar**
-- [ ] KLANG en Masquerade: fecha y material
+- [ ] KLANG en Masquerade: subir fotos, videos y proyecto
 - [ ] Links del sitio CEEICA (repo y web)
 - [ ] ¿Qué SoundCloud va en la web?
-- [ ] ¿El número se muestra directo o tras el botón "mostrar número"?
 
 **Más adelante**
 - [ ] Foto de perfil, fotos y videos de trabajos
-- [ ] Criterios de diseño y funcionalidades
+- [ ] Criterios de diseño visual (la UX está en `ux-cv.md`)
 - [ ] Subir este archivo a `main` cuando esté listo
