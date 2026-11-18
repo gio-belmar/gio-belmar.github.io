@@ -49,7 +49,7 @@
 - **Fija arriba** al hacer scroll.
 - Izquierda: **"Gio"** (al tocarlo vuelve arriba).
 - Enlaces: **Trayectoria · Proyectos · CV · Contacto**. El enlace de la sección visible se marca como activo.
-- Derecha: **botón de idioma**, un solo ícono de traducción (文A). Al tocarlo se despliega:
+- Derecha: **botón de modo claro/oscuro** (◐ / ☀) y **botón de idioma**, un solo ícono de traducción (文A). Al tocarlo se despliega:
   - Español
   - English
 - El idioma elegido se recuerda en el navegador. La primera vez se usa el idioma del navegador del visitante (si no es español, sale en inglés).
@@ -335,12 +335,26 @@ En columnas (en celular, una debajo de otra):
 
 ---
 
+## 9b. Diseño visual ✅ (dirección B · Editor)
+
+- **Concepto:** minimalista y limpio, como un editor de código.
+  - Números de línea en el margen.
+  - Secciones que abren y cierran con `{ }`.
+  - Datos en formato `clave: valor` coloreados como sintaxis.
+  - Buscador con cursor que parpadea.
+- **Tipografías:** IBM Plex Sans (nombre y textos) · IBM Plex Mono (menú, etiquetas, datos).
+- **Modo claro / oscuro:**
+  - La primera visita sigue la configuración del dispositivo.
+  - Un botón ◐ / ☀ junto al de idioma lo cambia, y la elección se recuerda.
+- **Paleta clara:** fondo #f7f8fa · paneles #ffffff · tinta #111827 · cobalto #2747d6 · rosado #b4235a · verde #0f7b5c
+- **Paleta oscura:** fondo #0f131a · paneles #141922 · texto #e7eaf0 · cobalto #7b93ff · rosado #ff7aa8 · verde #43d3a5
+- **Maquetas:** https://claude.ai/artifact/Bf9GJ8zQzHdFsZUi7uP2vv (privada)
+
 ## 10. Pendientes para empezar a construir
 
 - [ ] Renombrar el repo a `gio-belmar.github.io` (lo haces tú en GitHub, ver chat)
 - [ ] Estadísticas: GoatCounter o Google Analytics
-- [ ] Perfil breve de la portada: ¿te sirve el texto del resumen?
+- [ ] Perfil breve de la portada (párrafo de 2–3 líneas bajo el nombre): ¿sirve el propuesto?
 - [ ] Trabajos de KLANG a través de Obando
 - [ ] Foto de perfil 4:5
 - [ ] Fotos, videos y proyecto de KLANG Masquerade
-- [ ] Criterios de diseño visual
