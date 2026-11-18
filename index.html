@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gio · Visualista y técnico audiovisual</title>
+<meta name="description" content="CV de Gio (Giorgio Belmar Velásquez): visuales en vivo, pantallas LED, broadcast, sonido y diseño para eventos. Valdivia, Chile.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Gio · Visualista y técnico audiovisual">
+<meta property="og:description" content="Visuales en vivo, pantallas LED, broadcast, sonido y diseño para eventos. Valdivia, Chile.">
+<meta property="og:image" content="https://gio-belmar.github.io/assets/og.png">
+<meta property="og:url" content="https://gio-belmar.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2747d6">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>
+  /* Aplica tema e idioma antes de pintar, para evitar parpadeo */
+  (function(){try{var t=localStorage.getItem('gio-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+<a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+<header class="nav" id="top">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Gio, inicio">gio<b>.</b>cv</a>
+    <nav class="links" id="navLinks" aria-label="Secciones">
+      <a href="#trayectoria" data-i18n="nav.timeline">trayectoria</a>
+      <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
+      <a href="#cv" data-i18n="nav.cv">cv</a>
+      <a href="#contacto" data-i18n="nav.contact">contacto</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" type="button" aria-label="Cambiar a modo oscuro">☾</button>
+      <div class="lang">
+        <button class="icon-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="langMenu" aria-label="Idioma / Language">文A</button>
+        <div class="lang-menu" id="langMenu" role="menu" hidden>
+          <button type="button" role="menuitemradio" data-lang="es">Español</button>
+          <button type="button" role="menuitemradio" data-lang="en">English</button>
+        </div>
+      </div>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="side" id="side" aria-label="Habilidades">
+    <div class="side-in">
+      <div class="side-head">
+        <div>
+          <h2 class="side-title" data-i18n="side.title">Mi experiencia y habilidades</h2>
+          <p class="side-sub" data-i18n="side.sub">softwares, equipos, roles</p>
+        </div>
+        <button class="icon-btn side-toggle" id="sideToggle" type="button" aria-expanded="true" aria-controls="side" aria-label="Plegar panel">«</button>
+      </div>
+      <div class="search-wrap">
+        <label class="search" for="q">
+          <span class="search-p" aria-hidden="true">⌕</span>
+          <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="¿Qué habilidades buscas?">
+          <span class="cur blink" aria-hidden="true"></span>
+          <button type="button" class="clear" id="qClear" aria-label="Limpiar búsqueda" hidden>✕</button>
+        </label>
+        <div class="areas" id="areas" hidden></div>
+      </div>
+      <div id="results" class="results" hidden aria-live="polite"></div>
+      <div id="carousel" class="car" aria-roledescription="carrusel"></div>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <div class="gutter" id="gutter" aria-hidden="true"></div>
+
+    <section class="hero" id="hero"></section>
+
+    <section class="sec" id="trayectoria" aria-labelledby="h-tl">
+      <h2 class="sec-h" id="h-tl"><b data-i18n="sec.timeline">trayectoria</b> <i>{</i></h2>
+      <div class="filters" id="tlFilter" role="group"></div>
+      <ol class="tl" id="timeline"></ol>
+      <p class="close">}</p>
+    </section>
+
+    <section class="sec" id="proyectos" aria-labelledby="h-pr">
+      <h2 class="sec-h" id="h-pr"><b data-i18n="sec.projects">proyectos</b> <i>{</i></h2>
+      <div class="filters" id="prFilter" role="group"></div>
+      <div class="cards" id="projects"></div>
+      <p class="close">}</p>
+    </section>
+
+    <section class="sec" id="cv" aria-labelledby="h-cv">
+      <h2 class="sec-h" id="h-cv"><b data-i18n="sec.cv">cv</b> <i>{</i></h2>
+      <p class="lead" data-i18n="cv.title">¿Necesitas mi CV en PDF?</p>
+      <p class="muted" data-i18n="cv.sub">Elige la versión que más se acerque a lo que buscas.</p>
+      <div class="pdfs" id="pdfs"></div>
+      <p class="muted small"><span data-i18n="cv.other">¿Buscas otro enfoque?</span> <a href="#contacto" data-i18n="cv.write">Escríbeme</a></p>
+      <p class="close">}</p>
+    </section>
+
+    <section class="sec" id="contacto" aria-labelledby="h-ct">
+      <h2 class="sec-h" id="h-ct"><b data-i18n="sec.contact">contacto</b> <i>{</i></h2>
+      <p class="lead" id="availability"></p>
+      <dl class="contact" id="contact"></dl>
+      <p class="close">}</p>
+    </section>
+  </main>
+</div>
+
+<button class="fab" id="fab" type="button" aria-controls="side" aria-expanded="false" data-i18n="fab">Habilidades</button>
+<div class="scrim" id="scrim" hidden></div>
+<div class="pop" id="pop" role="tooltip" hidden></div>
+
+<footer class="foot" id="footer"></footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

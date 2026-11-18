@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Vista previa · Gio</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@500;600&display=swap">
+<style>
+/* Imagen de vista previa al compartir (1200 × 630). La genera scripts/build-pdfs.mjs como assets/og.png. */
+html, body { margin: 0; }
+body { width: 1200px; height: 630px; background: #f7f8fa; font-family: "IBM Plex Sans", sans-serif; color: #111827; display: grid; grid-template-columns: 64px 1fr; overflow: hidden; }
+.gut { background: #eef0f4; color: #a3a9b6; font: 400 15px/36px "IBM Plex Mono", monospace; text-align: right; padding: 40px 12px 0 0; white-space: pre; }
+.in { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center; padding: 0 72px 0 64px; }
+.ph { width: 300px; height: 375px; border: 2px solid #c9ced8; border-radius: 6px; object-fit: cover;
+  background: repeating-linear-gradient(0deg,#e1e4ea 0 1px,transparent 1px 18px), repeating-linear-gradient(90deg,#e1e4ea 0 1px,#fff 1px 18px); }
+.brand { font: 500 26px "IBM Plex Mono", monospace; } .brand b { color: #2747d6; font-weight: 500; }
+h1 { font-size: 150px; line-height: .85; margin: 18px 0 8px; font-weight: 600; letter-spacing: -.04em; }
+.say { font: 400 24px "IBM Plex Mono", monospace; color: #5f6675; } .say b { color: #b4235a; font-weight: 400; }
+.full { font-size: 34px; font-weight: 500; margin-top: 10px; }
+.tag { font-size: 25px; color: #3b4252; margin-top: 18px; line-height: 1.35; }
+.loc { font: 400 20px "IBM Plex Mono", monospace; color: #0f7b5c; margin-top: 18px; }
+.cur { display: inline-block; width: 3px; height: 30px; background: #2747d6; vertical-align: -5px; margin-left: 6px; }
+</style>
+</head>
+<body>
+<div class="gut">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</div>
+<div class="in">
+  <div id="ph"><div class="ph"></div></div>
+  <div>
+    <div class="brand">gio<b>.</b>cv</div>
+    <h1>Gio</h1>
+    <div class="say"><b>"</b>yío<b>"</b> · /ˈʝi.o/</div>
+    <div class="full">Giorgio Belmar Velásquez</div>
+    <div class="tag">Visualista · Técnico audiovisual<br>Estudiante de Ingeniería Civil Acústica<span class="cur"></span></div>
+    <div class="loc">lugar: Valdivia, Chile</div>
+  </div>
+</div>
+<script>
+fetch('data/cv.json').then(r => r.json()).then(async D => {
+  if (D.profile.photo) document.getElementById('ph').innerHTML = '<img class="ph" src="' + D.profile.photo + '" alt="">';
+  await document.fonts.ready;
+  const img = document.querySelector('#ph img');
+  if (img && !img.complete) await new Promise(r => { img.onload = img.onerror = r; });
+  document.body.dataset.ready = '1';
+});
+</script>
+</body>
+</html>

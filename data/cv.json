@@ -1,0 +1,431 @@
+{
+  "meta": {
+    "updated": "2026-11",
+    "siteUrl": "https://gio-belmar.github.io/",
+    "email": "giorgiobelmar@gmail.com",
+    "phone": ["+56", "9", "5287", "5646"],
+    "links": {
+      "instagram": { "label": "@tvmsito", "url": "https://www.instagram.com/tvmsito/" },
+      "linkedin": { "label": "Giorgio Belmar Velásquez", "url": "https://www.linkedin.com/in/giorgio-belmar-vel%C3%A1squez-a1716521b/" },
+      "soundcloud": null
+    }
+  },
+
+  "profile": {
+    "name": "Gio",
+    "say": { "es": "se pronuncia \"yío\"", "en": "pronounced \"YEE-oh\"" },
+    "ipa": "/ˈʝi.o/",
+    "fullName": "Giorgio Belmar Velásquez",
+    "photo": null,
+    "tagline": {
+      "es": "Visualista · Técnico audiovisual · Estudiante de Ingeniería Civil Acústica",
+      "en": "Visual artist (VJ) · Audiovisual technician · Acoustical Engineering student"
+    },
+    "summary": {
+      "es": "Técnico audiovisual, visualista y estudiante de quinto año de Ingeniería Civil Acústica. Trabajo entre el escenario, la cámara y el software: montaje de eventos, pantallas LED, visuales en vivo, streaming y sonido.",
+      "en": "Audiovisual technician, VJ and fifth-year Acoustical Engineering student. I work between the stage, the camera and the software: event setup, LED screens, live visuals, streaming and sound."
+    },
+    "facts": [
+      { "es": "Valdivia, Chile", "en": "Valdivia, Chile" },
+      { "es": "Disponible para viajar y trabajo remoto", "en": "Available to travel and work remotely" },
+      { "es": "Español nativo · Inglés intermedio", "en": "Spanish (native) · English (intermediate)" },
+      { "es": "Licencia clase B", "en": "Driver's license (class B)" }
+    ],
+    "availability": {
+      "es": "Disponible para eventos, producciones y proyectos audiovisuales. Base en Valdivia, con disponibilidad para viajar y trabajo remoto.",
+      "en": "Available for events, productions and audiovisual projects. Based in Valdivia, Chile, open to travel and remote work."
+    }
+  },
+
+  "areas": [
+    { "id": "vj", "es": "VJing y visuales", "en": "VJing & visuals" },
+    { "id": "led", "es": "Pantallas LED", "en": "LED screens" },
+    { "id": "broadcast", "es": "Broadcast y streaming", "en": "Broadcast & streaming" },
+    { "id": "audio", "es": "Audio en vivo", "en": "Live sound" },
+    { "id": "music", "es": "Producción musical", "en": "Music production" },
+    { "id": "acoustics", "es": "Acústica", "en": "Acoustics" },
+    { "id": "post", "es": "Edición y post", "en": "Editing & post" },
+    { "id": "3d", "es": "3D", "en": "3D" },
+    { "id": "design", "es": "Diseño gráfico", "en": "Graphic design" },
+    { "id": "cad", "es": "CAD y arquitectura", "en": "CAD & architecture" },
+    { "id": "ai", "es": "IA", "en": "AI" },
+    { "id": "web", "es": "Desarrollo web", "en": "Web development" },
+    { "id": "stage", "es": "Montaje y producción técnica", "en": "Stage & technical production" },
+    { "id": "events", "es": "Gestión de eventos", "en": "Event management" },
+    { "id": "social", "es": "Redes sociales", "en": "Social media" },
+    { "id": "office", "es": "Ofimática", "en": "Office tools" },
+    { "id": "other", "es": "Idiomas y otros", "en": "Languages & other" }
+  ],
+
+  "carousel": [
+    { "es": "VJing y visuales", "en": "VJing & visuals", "areas": ["vj", "led"] },
+    { "es": "Broadcast y streaming", "en": "Broadcast & streaming", "areas": ["broadcast"] },
+    { "es": "Audio en vivo", "en": "Live sound", "areas": ["audio"] },
+    { "es": "Producción musical", "en": "Music production", "areas": ["music"] },
+    { "es": "Edición, post y 3D", "en": "Editing, post & 3D", "areas": ["post", "3d"] },
+    { "es": "Acústica", "en": "Acoustics", "areas": ["acoustics"] },
+    { "es": "CAD y arquitectura", "en": "CAD & architecture", "areas": ["cad"] },
+    { "es": "Diseño gráfico", "en": "Graphic design", "areas": ["design"] },
+    { "es": "IA", "en": "AI", "areas": ["ai"] },
+    { "es": "Desarrollo web", "en": "Web development", "areas": ["web"] },
+    { "es": "Roles", "en": "Roles", "roles": true },
+    { "es": "Redes y ofimática", "en": "Social media & office", "areas": ["social", "office"] }
+  ],
+
+  "skills": [
+    { "id": "pa", "name": { "es": "Sistemas PA y microfonía", "en": "PA systems & microphones" }, "areas": ["audio", "stage"], "level": 80, "usedIn": ["obando"],
+      "tags": { "es": ["sonido", "amplificación", "parlantes", "line array", "microfonía", "micrófonos", "montaje de audio", "refuerzo sonoro"], "en": ["sound", "pa", "speakers", "line array", "mics", "sound reinforcement"] } },
+    { "id": "x32", "name": "Behringer X32", "areas": ["audio"], "level": 70, "usedIn": ["obando"],
+      "tags": { "es": ["consola", "mesa de mezcla", "mezcla", "foh", "monitores", "sonido en vivo", "audio digital"], "en": ["mixer", "mixing desk", "mixing", "live sound", "digital console", "foh"] } },
+    { "id": "m32", "name": "Midas M32", "areas": ["audio"], "level": 70, "usedIn": ["obando"],
+      "tags": { "es": ["consola", "mesa de mezcla", "mezcla", "foh", "monitores", "sonido en vivo", "audio digital"], "en": ["mixer", "mixing desk", "mixing", "live sound", "digital console", "foh"] } },
+
+    { "id": "ableton", "name": "Ableton Live", "areas": ["music"], "level": 100, "top": true, "usedIn": ["amotnto"],
+      "tags": { "es": ["daw", "producción musical", "música electrónica", "beats", "sesión en vivo", "midi", "sonido"], "en": ["daw", "music production", "electronic music", "beats", "live set", "midi"] } },
+    { "id": "reaper", "name": "Reaper", "areas": ["music"], "level": 80,
+      "tags": { "es": ["daw", "grabación", "edición de audio", "mezcla", "sonido"], "en": ["daw", "recording", "audio editing", "mixing"] } },
+
+    { "id": "ease", "name": "EASE", "areas": ["acoustics"], "level": 80, "usedIn": ["uach"],
+      "tags": { "es": ["acústica", "simulación acústica", "diseño de sistemas de sonido", "cobertura", "sonido"], "en": ["acoustics", "acoustic simulation", "sound system design", "coverage"] } },
+    { "id": "rew", "name": "REW (Room EQ Wizard)", "areas": ["acoustics", "audio"], "level": 60, "usedIn": ["uach"],
+      "tags": { "es": ["acústica", "medición", "respuesta de sala", "ecualización", "calibración", "sonido"], "en": ["acoustics", "measurement", "room response", "eq", "tuning", "calibration"] } },
+
+    { "id": "resolume", "name": "Resolume Arena", "areas": ["vj"], "level": 80, "usedIn": ["obando", "laf", "klang"],
+      "tags": { "es": ["vj", "visuales", "vjing", "mapping", "proyección", "show en vivo", "video"], "en": ["vj", "visuals", "live visuals", "projection mapping", "projection", "video"] } },
+    { "id": "novastar", "name": "Novastar VX600 / VX1000", "areas": ["led"], "level": 80, "usedIn": ["obando", "laf"],
+      "tags": { "es": ["pantalla led", "pantallas", "procesador de video", "mapping de pantalla", "escalado", "video"], "en": ["led wall", "led screen", "video processor", "screen mapping", "scaling"] } },
+    { "id": "touchdesigner", "name": "TouchDesigner", "areas": ["vj"], "level": 30,
+      "tags": { "es": ["visuales generativas", "interactivo", "mapping", "programación visual", "vj"], "en": ["generative visuals", "interactive", "projection mapping", "node-based", "vj"] } },
+    { "id": "madmapper", "name": "MadMapper", "areas": ["vj"], "level": 20,
+      "tags": { "es": ["mapping", "proyección", "visuales", "vj"], "en": ["projection mapping", "projection", "visuals", "vj"] } },
+
+    { "id": "obs", "name": "OBS Studio", "areas": ["broadcast", "vj"], "level": 100, "top": true, "usedIn": ["obando"],
+      "tags": { "es": ["streaming", "transmisión", "broadcast", "en vivo", "grabación", "escenas", "video"], "en": ["live streaming", "streaming", "broadcast", "recording", "scenes", "video"] } },
+    { "id": "cameras", "name": { "es": "Dirección de cámaras", "en": "Camera direction" }, "areas": ["broadcast"], "level": 90, "usedIn": ["obando"],
+      "tags": { "es": ["multicámara", "switcher", "realización", "cámaras", "video", "transmisión"], "en": ["multicam", "switcher", "directing", "cameras", "video"] } },
+    { "id": "wireless", "name": { "es": "Transmisores inalámbricos y teleprompter", "en": "Wireless video transmitters & teleprompter" }, "areas": ["broadcast"], "level": 90, "usedIn": ["obando"],
+      "tags": { "es": ["transmisores", "inalámbrico", "teleprompter", "cámaras", "video"], "en": ["wireless video", "transmitters", "teleprompter", "cameras"] } },
+
+    { "id": "davinci", "name": "DaVinci Resolve", "areas": ["post"], "level": 90, "top": true, "usedIn": ["corto"],
+      "tags": { "es": ["edición de video", "colorización", "corrección de color", "post", "postproducción", "montaje", "video"], "en": ["video editing", "color grading", "post-production", "editing", "video"] } },
+    { "id": "premiere", "name": "Premiere Pro", "areas": ["post"], "level": 80, "note": { "es": "experiencia previa", "en": "previous experience" },
+      "tags": { "es": ["edición de video", "post", "postproducción", "montaje", "video", "adobe"], "en": ["video editing", "post-production", "editing", "video", "adobe"] } },
+    { "id": "aftereffects", "name": "After Effects", "areas": ["post"], "level": 80, "note": { "es": "experiencia previa", "en": "previous experience" },
+      "tags": { "es": ["motion graphics", "animación", "composición", "efectos", "post", "adobe"], "en": ["motion graphics", "animation", "compositing", "vfx", "adobe"] } },
+    { "id": "blender", "name": "Blender", "areas": ["3d", "post"], "level": 90, "top": true, "usedIn": ["obando", "corto"],
+      "tags": { "es": ["3d", "modelado", "render", "escenografía", "animación", "renders de escenario"], "en": ["3d", "modeling", "rendering", "stage design", "animation"] } },
+
+    { "id": "affinity", "name": "Affinity", "areas": ["design"], "level": 90, "top": true, "usedIn": ["laf"],
+      "tags": { "es": ["diseño gráfico", "branding", "identidad visual", "afiches", "redes", "ilustración", "maquetación"], "en": ["graphic design", "branding", "visual identity", "posters", "social media", "layout"] } },
+    { "id": "photoshop", "name": "Photoshop", "areas": ["design"], "level": 90, "top": true,
+      "tags": { "es": ["diseño gráfico", "retoque", "fotografía", "edición de imagen", "adobe"], "en": ["graphic design", "photo retouching", "image editing", "adobe"] } },
+    { "id": "illustrator", "name": "Illustrator", "areas": ["design"], "level": 50,
+      "tags": { "es": ["diseño gráfico", "vectores", "logos", "ilustración", "adobe"], "en": ["graphic design", "vector", "logos", "illustration", "adobe"] } },
+
+    { "id": "autocad", "name": "AutoCAD", "areas": ["cad"], "level": 100, "top": true, "usedIn": ["asprintec"],
+      "tags": { "es": ["cad", "planos", "dibujo técnico", "arquitectura", "planimetría", "levantamiento"], "en": ["cad", "technical drawing", "floor plans", "drafting", "architecture"] } },
+    { "id": "sketchup", "name": "SketchUp", "areas": ["cad", "3d"], "level": 100, "top": true, "usedIn": ["asprintec"],
+      "tags": { "es": ["cad", "3d", "modelado arquitectónico", "arquitectura", "maquetas"], "en": ["cad", "3d", "architectural modeling", "architecture"] } },
+    { "id": "archicad", "name": "ArchiCAD", "areas": ["cad"], "level": 30, "note": { "es": "uso no profesional", "en": "non-professional use" },
+      "tags": { "es": ["cad", "bim", "arquitectura", "planos"], "en": ["cad", "bim", "architecture"] } },
+
+    { "id": "claude", "name": "Claude Code", "areas": ["ai", "web"], "level": 90, "top": true, "note": { "es": "principal", "en": "main tool" }, "usedIn": ["laf", "ceeica", "cvweb"],
+      "tags": { "es": ["ia", "inteligencia artificial", "programación asistida", "automatización", "agentes"], "en": ["ai", "artificial intelligence", "ai-assisted coding", "automation", "agents"] } },
+    { "id": "chatgpt", "name": "ChatGPT", "areas": ["ai"], "level": 90,
+      "tags": { "es": ["ia", "inteligencia artificial", "redacción", "investigación"], "en": ["ai", "artificial intelligence", "writing", "research"] } },
+    { "id": "opencode", "name": "OpenCode", "areas": ["ai"], "level": 80,
+      "tags": { "es": ["ia", "programación asistida", "agentes"], "en": ["ai", "ai-assisted coding", "agents"] } },
+    { "id": "deepseek", "name": "DeepSeek", "areas": ["ai"], "level": 80,
+      "tags": { "es": ["ia", "inteligencia artificial"], "en": ["ai", "artificial intelligence"] } },
+    { "id": "notebooklm", "name": "NotebookLM", "areas": ["ai"], "level": 60,
+      "tags": { "es": ["ia", "estudio", "investigación", "resúmenes"], "en": ["ai", "research", "study", "summaries"] } },
+    { "id": "copilot", "name": "GitHub Copilot", "areas": ["ai"], "level": 50,
+      "tags": { "es": ["ia", "programación asistida"], "en": ["ai", "ai-assisted coding"] } },
+
+    { "id": "webdev", "name": { "es": "HTML / CSS / React (con IA)", "en": "HTML / CSS / React (AI-assisted)" }, "areas": ["web"], "level": 90, "usedIn": ["laf", "ceeica", "cvweb"],
+      "tags": { "es": ["web", "sitio web", "página web", "desarrollo", "frontend", "programación", "javascript"], "en": ["web", "website", "web development", "frontend", "javascript"] } },
+    { "id": "github", "name": "GitHub / GitHub Pages / Actions", "areas": ["web"], "level": 90, "usedIn": ["laf", "ceeica", "cvweb"],
+      "tags": { "es": ["git", "repositorio", "publicación web", "automatización", "control de versiones"], "en": ["git", "repository", "deployment", "automation", "version control"] } },
+    { "id": "sheets", "name": "Google Sheets / Apps Script", "areas": ["web", "office"], "level": 70, "usedIn": ["laf"],
+      "tags": { "es": ["planillas", "automatización", "base de datos", "excel"], "en": ["spreadsheets", "automation", "database"] } },
+
+    { "id": "instagram", "name": "Instagram", "areas": ["social"], "level": 90, "usedIn": ["laf"],
+      "tags": { "es": ["redes sociales", "contenido", "comunicación", "posts", "community"], "en": ["social media", "content", "communication", "posts"] } },
+    { "id": "youtube", "name": "YouTube", "areas": ["social"], "level": 90,
+      "tags": { "es": ["redes sociales", "video", "contenido", "publicación"], "en": ["social media", "video", "content", "publishing"] } },
+    { "id": "tiktok", "name": "TikTok", "areas": ["social"], "level": 40,
+      "tags": { "es": ["redes sociales", "video corto", "contenido"], "en": ["social media", "short video", "content"] } },
+
+    { "id": "latex", "name": "LaTeX", "areas": ["office"], "level": 80, "usedIn": ["uach"],
+      "tags": { "es": ["informes", "documentos", "redacción técnica"], "en": ["reports", "documents", "technical writing"] } },
+    { "id": "msoffice", "name": { "es": "Microsoft Office (Word, Excel, PowerPoint)", "en": "Microsoft Office (Word, Excel, PowerPoint)" }, "areas": ["office"], "level": 80,
+      "tags": { "es": ["word", "excel", "powerpoint", "planillas", "presentaciones", "documentos"], "en": ["word", "excel", "powerpoint", "spreadsheets", "presentations"] } },
+
+    { "id": "layher", "name": { "es": "Montaje de estructuras Layher", "en": "Layher stage structures" }, "areas": ["stage"], "level": 80, "usedIn": ["obando"],
+      "tags": { "es": ["montaje", "escenario", "estructuras", "andamios", "montajista", "stagehand"], "en": ["stage building", "scaffolding", "structures", "stagehand", "rigging"] } },
+    { "id": "logistics", "name": { "es": "Carga y logística de equipos", "en": "Equipment loading & logistics" }, "areas": ["stage"], "level": 80, "usedIn": ["obando"],
+      "tags": { "es": ["logística", "bodega", "carga", "descarga", "camiones", "montaje"], "en": ["logistics", "warehouse", "load-in", "load-out", "trucks"] } },
+    { "id": "sponsors", "name": { "es": "Patrocinios y negociación", "en": "Sponsorship & negotiation" }, "areas": ["events"], "level": 70, "usedIn": ["laf"],
+      "tags": { "es": ["patrocinio", "auspicio", "dossier", "negociación", "proveedores", "cotizaciones", "gestión"], "en": ["sponsorship", "sponsor deck", "negotiation", "vendors", "quotes"] } },
+    { "id": "venue", "name": { "es": "Diseño de espacios para eventos", "en": "Event venue layout" }, "areas": ["events"], "level": 70, "usedIn": ["laf"],
+      "tags": { "es": ["layout", "recinto", "planificación", "producción", "distribución"], "en": ["layout", "venue", "planning", "production"] } },
+
+    { "id": "spanish", "name": { "es": "Español", "en": "Spanish" }, "areas": ["other"], "level": 100, "note": { "es": "nativo", "en": "native" },
+      "tags": { "es": ["idiomas", "lengua"], "en": ["languages", "language"] } },
+    { "id": "english", "name": { "es": "Inglés", "en": "English" }, "areas": ["other"], "level": 50, "note": { "es": "intermedio", "en": "intermediate" },
+      "tags": { "es": ["idiomas", "lengua"], "en": ["languages", "language"] } },
+    { "id": "license", "name": { "es": "Licencia de conducir clase B", "en": "Driver's license (class B)" }, "areas": ["other"], "level": null, "note": { "es": "desde 2022", "en": "since 2022" },
+      "tags": { "es": ["conducir", "vehículo", "traslado de equipos", "licencia"], "en": ["driving", "vehicle", "license"] } }
+  ],
+
+  "roles": [
+    { "id": "r-vj", "name": { "es": "Visualista / VJ", "en": "VJ / visual artist" }, "years": { "es": "2024 – hoy", "en": "2024 – now" }, "usedIn": ["obando", "laf", "klang"], "tags": ["vj", "visuales", "visuals", "vjing"] },
+    { "id": "r-led", "name": { "es": "Técnico de pantallas LED", "en": "LED screen technician" }, "years": { "es": "2024 – 2026", "en": "2024 – 2026" }, "usedIn": ["obando", "laf"], "tags": ["led", "pantallas", "screens"] },
+    { "id": "r-stream", "name": { "es": "Operador de streaming y dirección de cámaras", "en": "Streaming operator & camera director" }, "years": { "es": "2024 – 2026", "en": "2024 – 2026" }, "usedIn": ["obando"], "tags": ["streaming", "broadcast", "cámaras", "cameras"] },
+    { "id": "r-sound", "name": { "es": "Técnico de sonido", "en": "Sound technician" }, "years": { "es": "2024 – 2026", "en": "2024 – 2026" }, "usedIn": ["obando"], "tags": ["sonido", "audio", "sound"] },
+    { "id": "r-stage", "name": { "es": "Montajista", "en": "Stagehand" }, "years": { "es": "2024 – 2026", "en": "2024 – 2026" }, "usedIn": ["obando"], "tags": ["montaje", "escenario", "stage", "layher"] },
+    { "id": "r-art", "name": { "es": "Director de arte / identidad visual", "en": "Art director / visual identity" }, "years": { "es": "2026", "en": "2026" }, "usedIn": ["laf"], "tags": ["branding", "diseño", "design", "identidad"] },
+    { "id": "r-prod", "name": { "es": "Productor y organizador de eventos", "en": "Event producer & organizer" }, "years": { "es": "2026", "en": "2026" }, "usedIn": ["laf"], "tags": ["producción", "organización", "production", "events"] },
+    { "id": "r-cad", "name": { "es": "Dibujante técnico CAD", "en": "CAD draftsman" }, "years": { "es": "2020 – hoy", "en": "2020 – now" }, "usedIn": ["asprintec"], "tags": ["cad", "planos", "drafting"] },
+    { "id": "r-web", "name": { "es": "Desarrollador web (con IA)", "en": "Web developer (AI-assisted)" }, "years": { "es": "2026", "en": "2026" }, "usedIn": ["laf", "ceeica", "cvweb"], "tags": ["web", "desarrollo", "development"] }
+  ],
+
+  "timeline": [
+    {
+      "id": "laf", "type": "work",
+      "role": { "es": "Co-organizador · Director de arte · Técnico de video", "en": "Co-organizer · Art director · Video technician" },
+      "org": "LOOK AT FLOWERS",
+      "orgNote": { "es": "Festival universitario", "en": "University music festival" },
+      "place": { "es": "Valdivia, Los Ríos", "en": "Valdivia, Chile" },
+      "from": "2026-05", "to": "2026-11",
+      "bullets": {
+        "es": [
+          "Parte de la comisión organizadora del festival (Edición 1 y Edición Primavera 2026).",
+          "Creé toda la identidad visual y la marca, y diseño todos los posts informativos en Instagram.",
+          "Armé el dossier de patrocinio y cerré tratos con colaboradores; dirigí las cotizaciones de equipos.",
+          "Diseño del recinto (dónde va cada escenario y puesto) y técnico de video y pantalla el día del evento.",
+          "Desarrollé y mantengo el sitio web: line-up, cronograma, mapa y postulaciones sincronizadas con Google Sheets."
+        ],
+        "en": [
+          "Member of the organizing committee (1st Edition and Spring Edition 2026).",
+          "Created the full visual identity and brand, and design all informational Instagram posts.",
+          "Wrote the sponsorship deck and closed deals with partners; led equipment quotes.",
+          "Venue layout planning, and video and LED screen technician on show day.",
+          "Built and maintain the website: line-up, schedule, map and applications synced with Google Sheets."
+        ]
+      },
+      "events": [
+        { "name": "Edición 1", "place": "Valdivia · mayo–junio 2026" },
+        { "name": "Edición Primavera", "place": "Campus Miraflores UACh + Dubai Club · 6 nov 2026" }
+      ],
+      "skills": ["affinity", "novastar", "resolume", "webdev", "claude", "sheets", "instagram", "sponsors", "venue"]
+    },
+    {
+      "id": "obando", "type": "work",
+      "role": { "es": "Técnico audiovisual · Encargado de visuales · Montajista", "en": "Audiovisual technician · Head of visuals · Stagehand" },
+      "org": "Obando Sonido SpA",
+      "orgNote": { "es": "Empresa de sonido y eventos", "en": "Sound & events company" },
+      "place": { "es": "Valdivia y alrededores, Los Ríos", "en": "Valdivia area, Chile" },
+      "from": "2024-12", "to": "2026-07",
+      "bullets": {
+        "es": [
+          "Encargado principal de visuales en eventos con Resolume y OBS.",
+          "Dirección de cámaras en transmisión y grabación: cámaras, transmisores inalámbricos y teleprompter.",
+          "Configuración y mapping de pantallas LED con procesadores Novastar VX600 y VX1000.",
+          "Carga y descarga de equipos de audio, luces y pantallas; montaje de estructuras Layher para escenario.",
+          "Apoyo en control de audio y renders 3D de escenarios para licitaciones."
+        ],
+        "en": [
+          "Lead visuals operator at events with Resolume and OBS.",
+          "Camera direction for streams and recordings: cameras, wireless transmitters and teleprompter.",
+          "LED screen setup and mapping with Novastar VX600 and VX1000 processors.",
+          "Loading of audio, lighting and screen equipment; Layher stage structure assembly.",
+          "Support on audio mixing and 3D stage renders for tenders."
+        ]
+      },
+      "events": [
+        { "name": "Festival de los Paraguas", "place": "Valdivia" },
+        { "name": "Noche Valdiviana", "place": "Valdivia" },
+        { "name": "Festival de la Leche", "place": "Máfil" },
+        { "name": "Carros Locos", "place": "Valdivia" },
+        { "name": "Aniversario de Castro", "place": "Castro, Chiloé" },
+        { "name": "Evento en Paillaco", "place": "Paillaco" },
+        { "name": "Barrio Cochrane", "place": "Valdivia" },
+        { "name": "KLANG × SUN IS UP", "place": "Valdivia" },
+        { "name": "CECs", "place": "Valdivia" }
+      ],
+      "skills": ["resolume", "obs", "cameras", "wireless", "novastar", "layher", "logistics", "pa", "x32", "m32", "blender"]
+    },
+    {
+      "id": "uach", "type": "edu",
+      "role": { "es": "Ingeniería Civil Acústica", "en": "Acoustical Engineering (B.Sc. + professional degree)" },
+      "org": "Universidad Austral de Chile",
+      "orgNote": { "es": "En curso · 5.º año", "en": "In progress · 5th year" },
+      "place": { "es": "Valdivia, Los Ríos", "en": "Valdivia, Chile" },
+      "from": "2022-03", "to": "2027-12", "toLabel": { "es": "2027 (egreso estimado)", "en": "2027 (expected)" },
+      "bullets": {
+        "es": [ "Acústica, sistemas de sonido, simulación (EASE) y medición (REW)." ],
+        "en": [ "Acoustics, sound systems, simulation (EASE) and measurement (REW)." ]
+      },
+      "skills": ["ease", "rew", "latex"]
+    },
+    {
+      "id": "asprintec", "type": "work",
+      "role": { "es": "Dibujante técnico de arquitectura", "en": "Architectural draftsman" },
+      "org": "Asprintec Ltda",
+      "orgNote": { "es": "Oficina de arquitectura", "en": "Architecture office" },
+      "place": { "es": "Puerto Montt, Los Lagos", "en": "Puerto Montt, Chile" },
+      "from": "2020-01", "to": null,
+      "bullets": {
+        "es": [
+          "Levantamiento planimétrico y dibujo técnico de viviendas en AutoCAD y SketchUp.",
+          "Armado de carpetas municipales para trámites de regularización.",
+          "Part-time continuo y full-time en verano (2020–2023); desde entonces, unos 5 proyectos al año."
+        ],
+        "en": [
+          "Site surveys and technical drawings of houses in AutoCAD and SketchUp.",
+          "Preparation of municipal permit files for building regularization.",
+          "Steady part-time work and full-time summers (2020–2023); about 5 projects a year since then."
+        ]
+      },
+      "skills": ["autocad", "sketchup"]
+    }
+  ],
+
+  "projectGroups": [
+    { "id": "colectivo", "es": "Colectivos", "en": "Collective" },
+    { "id": "herramienta", "es": "Herramientas", "en": "Tools", "parent": { "es": "Personales", "en": "Personal" } },
+    { "id": "creativo", "es": "Creativos", "en": "Creative", "parent": { "es": "Personales", "en": "Personal" } }
+  ],
+
+  "projects": [
+    {
+      "id": "laf", "group": "colectivo", "year": "2026", "status": "done",
+      "title": "LOOK AT FLOWERS",
+      "role": { "es": "Co-organizador, dirección de arte, web y técnico de video", "en": "Co-organizer, art direction, website and video tech" },
+      "abstract": {
+        "es": "Festival universitario de música en Valdivia, organizado por una comisión de estudiantes. Me encargué de la identidad visual, la comunicación, el sitio web y la parte técnica de video el día del evento.",
+        "en": "University music festival in Valdivia, run by a student committee. I handled the visual identity, communications, the website and video tech on show day."
+      },
+      "body": {
+        "es": [
+          "Dos ediciones en 2026. La Edición Primavera tuvo dos escenarios en el Campus Miraflores de la UACh (Flowers Stage para bandas y Valdivia Stage para DJs) y una jornada nocturna en Dubai Club, con unos 25 artistas y 55 postulaciones gestionadas.",
+          "Creé la marca y la estética visual completa, diseñé los posts informativos de Instagram y las visuales proyectadas durante los shows. Armé el dossier de patrocinio, cerré tratos con colaboradores y dirigí las cotizaciones de equipos.",
+          "El sitio web muestra line-up, cronograma, mapa interactivo y un formulario de postulaciones, y se actualiza automáticamente desde una planilla de Google Sheets mediante GitHub Actions."
+        ],
+        "en": [
+          "Two editions in 2026. The Spring Edition had two stages at UACh's Miraflores Campus (Flowers Stage for bands and Valdivia Stage for DJs) plus a night at Dubai Club, with about 25 artists and 55 applications handled.",
+          "I created the brand and full visual aesthetic, designed the informational Instagram posts and the visuals projected during the shows. I wrote the sponsorship deck, closed deals with partners and led equipment quotes.",
+          "The website shows the line-up, schedule, interactive map and an application form, and updates automatically from a Google Sheet through GitHub Actions."
+        ]
+      },
+      "images": [],
+      "links": {
+        "site": "https://lookatflowers.github.io/",
+        "repo": "https://github.com/lookatflowers/lookatflowers.github.io",
+        "instagram": "https://www.instagram.com/lookatflowers.cl/",
+        "doc": "https://lookatflowers.github.io/dossier-patrocinio.pdf"
+      },
+      "skills": ["affinity", "resolume", "novastar", "webdev", "claude", "github", "sheets", "instagram", "sponsors", "venue"]
+    },
+    {
+      "id": "ceeica", "group": "colectivo", "year": "2026", "status": "done",
+      "title": { "es": "Sitio web CEEICA", "en": "CEEICA website" },
+      "role": { "es": "Desarrollo web", "en": "Web development" },
+      "abstract": {
+        "es": "Página del Centro de Estudiantes de Ingeniería Civil Acústica de la UACh, con buscador rápido de contenidos, publicada en GitHub Pages.",
+        "en": "Website for the UACh Acoustical Engineering student union, with a quick content search, published on GitHub Pages."
+      },
+      "body": {
+        "es": [ "Pensada para centralizar la información del centro de estudiantes y que cada estudiante encuentre rápido lo que necesita." ],
+        "en": [ "Built to gather the student union's information in one place so students can quickly find what they need." ]
+      },
+      "images": [], "links": {},
+      "skills": ["webdev", "github", "claude"]
+    },
+    {
+      "id": "klang", "group": "creativo", "year": "2026", "status": "done",
+      "title": "KLANG · Masquerade",
+      "role": { "es": "Visualista: concepto y operación", "en": "VJ: concept and live operation" },
+      "abstract": {
+        "es": "Visuales en vivo para la fiesta KLANG Masquerade (31 de octubre de 2026). La propuesta visual fue mía y la hice con herramientas propias.",
+        "en": "Live visuals for the KLANG Masquerade party (October 31, 2026). The visual concept was my own, built with my own tools."
+      },
+      "body": {
+        "es": [ "Trabajo directo con KLANG. Pronto: fotos, videos y el proyecto de visuales." ],
+        "en": [ "Hired directly by KLANG. Coming soon: photos, videos and the visuals project." ]
+      },
+      "images": [], "links": {},
+      "skills": ["resolume"]
+    },
+    {
+      "id": "corto", "group": "creativo", "year": "2026", "status": "wip",
+      "title": { "es": "Cortometraje", "en": "Short film" },
+      "role": { "es": "Edición, post y 3D", "en": "Editing, post and 3D" },
+      "abstract": {
+        "es": "Cortometraje grabado con equipo de la UACh, editado en DaVinci Resolve y con modelado 3D en Blender. Está casi terminado y se publicará en YouTube.",
+        "en": "Short film shot with UACh equipment, edited in DaVinci Resolve with 3D modeling in Blender. Almost finished; it will be released on YouTube."
+      },
+      "body": { "es": [], "en": [] },
+      "images": [], "links": {},
+      "skills": ["davinci", "blender"]
+    },
+    {
+      "id": "amotnto", "group": "creativo", "year": "2020 –", "status": "ongoing",
+      "title": { "es": "Producción musical · amotnto", "en": "Music production · amotnto" },
+      "role": { "es": "Productor", "en": "Producer" },
+      "abstract": {
+        "es": "Producción de música electrónica y urbana en Ableton Live desde 2020. Sin lanzamientos oficiales aún; hay bocetos en SoundCloud bajo el nombre amotnto.",
+        "en": "Electronic and urban music produced in Ableton Live since 2020. No official releases yet; sketches are on SoundCloud as amotnto."
+      },
+      "body": { "es": [], "en": [] },
+      "images": [], "links": {},
+      "skills": ["ableton"]
+    },
+    {
+      "id": "storyboard", "group": "herramienta", "year": "2026", "status": "wip",
+      "title": { "es": "Herramienta de storyboard", "en": "Storyboard tool" },
+      "role": { "es": "Desarrollo", "en": "Development" },
+      "abstract": {
+        "es": "Software para armar storyboards, en etapa temprana de desarrollo.",
+        "en": "Software for building storyboards, in early development."
+      },
+      "body": { "es": [], "en": [] },
+      "images": [], "links": {},
+      "skills": ["claude", "webdev"]
+    },
+    {
+      "id": "vjtool", "group": "herramienta", "year": "2026", "status": "wip",
+      "title": { "es": "Herramienta de broadcast, VJing y mapping", "en": "Broadcast, VJing & mapping tool" },
+      "role": { "es": "Desarrollo", "en": "Development" },
+      "abstract": {
+        "es": "Herramienta que busca juntar lo mejor de Resolume y OBS para broadcast, VJing y mapping en un solo flujo de trabajo.",
+        "en": "A tool that aims to combine the best of Resolume and OBS for broadcast, VJing and mapping in a single workflow."
+      },
+      "body": { "es": [], "en": [] },
+      "images": [], "links": {},
+      "skills": ["claude", "resolume", "obs"]
+    },
+    {
+      "id": "cvweb", "group": "herramienta", "year": "2026", "status": "ongoing",
+      "title": { "es": "Este CV web", "en": "This web CV" },
+      "role": { "es": "Diseño y desarrollo", "en": "Design and development" },
+      "abstract": {
+        "es": "El sitio que estás viendo: buscador de habilidades, línea de tiempo, versión en inglés, modo oscuro y CV en PDF generado automáticamente.",
+        "en": "The site you're looking at: skills search, timeline, English version, dark mode and auto-generated PDF CVs."
+      },
+      "body": { "es": [], "en": [] },
+      "images": [], "links": { "repo": "https://github.com/gio-belmar/gio-belmar.github.io" },
+      "skills": ["claude", "webdev", "github"]
+    }
+  ],
+
+  "cvVersions": [
+    { "id": "completo", "es": "Completo", "en": "Full", "focus": { "es": "Toda la trayectoria y todas las habilidades.", "en": "Full background and every skill." }, "areas": null },
+    { "id": "audiovisual", "es": "Audiovisual y visuales", "en": "Audiovisual & visuals", "focus": { "es": "VJing, pantallas LED, broadcast, edición y 3D.", "en": "VJing, LED screens, broadcast, editing and 3D." }, "areas": ["vj", "led", "broadcast", "post", "3d", "stage"] },
+    { "id": "sonido", "es": "Sonido y acústica", "en": "Sound & acoustics", "focus": { "es": "Audio en vivo, producción musical y acústica.", "en": "Live sound, music production and acoustics." }, "areas": ["audio", "music", "acoustics", "stage"] },
+    { "id": "diseno", "es": "Diseño y comunicación", "en": "Design & communication", "focus": { "es": "Identidad visual, diseño gráfico, redes y web.", "en": "Visual identity, graphic design, social media and web." }, "areas": ["design", "social", "web", "ai"] },
+    { "id": "cad", "es": "Dibujo técnico y arquitectura", "en": "Drafting & architecture", "focus": { "es": "CAD, planimetría y modelado arquitectónico.", "en": "CAD, surveys and architectural modeling." }, "areas": ["cad", "3d", "office"] },
+    { "id": "eventos", "es": "Producción de eventos", "en": "Event production", "focus": { "es": "Organización, montaje, logística y técnica.", "en": "Organization, stage building, logistics and tech." }, "areas": ["events", "stage", "led", "audio", "vj"] }
+  ]
+}

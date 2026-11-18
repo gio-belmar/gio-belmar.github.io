@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV · Giorgio Belmar Velásquez</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Plantilla de impresión de los CV en PDF (tamaño carta). La usa scripts/build-pdfs.mjs. */
+@page { size: Letter; margin: 14mm 15mm 14mm 15mm; }
+:root { --ink: #111827; --text: #2f3644; --muted: #5f6675; --line: #d9dde4; --blue: #2747d6; --pink: #b4235a; --green: #0f7b5c;
+  --sans: "IBM Plex Sans", Arial, sans-serif; --mono: "IBM Plex Mono", Menlo, monospace; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #fff; color: var(--text); font: 400 9.6pt/1.42 var(--sans); }
+a { color: var(--blue); text-decoration: none; }
+h1, h2, h3 { color: var(--ink); margin: 0; }
+.head { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: end; padding-bottom: 10px; border-bottom: 1.5px solid var(--ink); }
+.ph { width: 68px; aspect-ratio: 4/5; border-radius: 3px; object-fit: cover; }
+.name { font-size: 30pt; line-height: .9; font-weight: 600; letter-spacing: -.03em; }
+.name small { font-family: var(--mono); font-size: 8pt; font-weight: 400; color: var(--muted); letter-spacing: 0; margin-left: 8px; }
+.full { font-size: 11.5pt; font-weight: 500; color: var(--ink); margin-top: 4px; }
+.tag { color: var(--text); margin-top: 1px; }
+.contact { font-family: var(--mono); font-size: 7.8pt; color: var(--muted); display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 5px; }
+.contact b { color: var(--green); font-weight: 400; }
+.version { font-family: var(--mono); font-size: 7.5pt; color: var(--pink); }
+.cols { display: grid; grid-template-columns: 1fr 2.05in; gap: 18px; margin-top: 12px; }
+.sec { margin-bottom: 11px; break-inside: auto; }
+.sec h2 { font-family: var(--mono); font-size: 9pt; font-weight: 500; color: var(--blue); margin-bottom: 6px; }
+.sec h2 i { color: #a3a9b6; font-style: normal; }
+.summary { margin: 0; }
+.job { margin-bottom: 8px; break-inside: avoid; }
+.job h3 { font-size: 10pt; font-weight: 600; }
+.job .meta { font-family: var(--mono); font-size: 7.6pt; color: var(--muted); }
+.job .meta .org { color: var(--ink); }
+.job ul { margin: 3px 0 0; padding-left: 13px; }
+.job li { margin: 1px 0; }
+.job .ev { font-size: 8pt; color: var(--muted); margin-top: 2px; }
+.sk-g { margin-bottom: 7px; break-inside: avoid; }
+.sk-g h3 { font-family: var(--mono); font-size: 7.6pt; font-weight: 500; color: var(--pink); margin-bottom: 2px; }
+.sk { display: flex; justify-content: space-between; gap: 6px; font-size: 8.4pt; line-height: 1.35; }
+.sk span:last-child { font-family: var(--mono); font-size: 7pt; color: var(--muted); white-space: nowrap; }
+.side p { margin: 0 0 3px; font-size: 8.4pt; }
+.proj { margin-bottom: 5px; break-inside: avoid; }
+.proj b { color: var(--ink); font-weight: 600; }
+.foot { margin-top: 8px; padding-top: 6px; border-top: 1px solid var(--line); font-family: var(--mono); font-size: 7.4pt; color: var(--muted); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div id="cv"></div>
+<script>
+(async function () {
+  const P = new URLSearchParams(location.search);
+  const lang = P.get('lang') === 'en' ? 'en' : 'es';
+  const D = await (await fetch('data/cv.json')).json();
+  const L = o => o == null ? '' : (typeof o === 'string' ? o : (o[lang] ?? o.es));
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const T = {
+    es: { profile: 'perfil', exp: 'trayectoria', skills: 'habilidades', roles: 'roles', projects: 'proyectos', more: 'más', present: 'presente', web: 'web', hi: 'Avanzado', mid: 'Intermedio', lo: 'Principiante', ver: 'Versión', updated: 'Actualizado', months: ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'], full: 'CV completo y buscador de habilidades en' },
+    en: { profile: 'profile', exp: 'experience', skills: 'skills', roles: 'roles', projects: 'projects', more: 'more', present: 'present', web: 'web', hi: 'Advanced', mid: 'Intermediate', lo: 'Beginner', ver: 'Version', updated: 'Updated', months: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], full: 'Full CV and skills search at' }
+  }[lang];
+  const v = D.cvVersions.find(x => x.id === P.get('v')) || D.cvVersions[0];
+  const inV = s => !v.areas || (s.areas || []).some(a => v.areas.includes(a));
+  const fmt = ym => { if (!ym) return T.present; const [y, m] = ym.split('-'); return T.months[+m - 1] + ' ' + y; };
+  const range = e => fmt(e.from) + ' – ' + (e.toLabel ? L(e.toLabel) : fmt(e.to));
+  const lv = n => n == null ? '' : n >= 70 ? T.hi : n >= 40 ? T.mid : T.lo;
+  const p = D.profile, m = D.meta;
+  const site = m.siteUrl.replace(/^https?:\/\//, '').replace(/\/$/, '');
+
+  // Experiencia: en versiones enfocadas, primero las entradas con más habilidades del área.
+  const relevance = e => (e.skills || []).filter(id => { const s = D.skills.find(x => x.id === id); return s && inV(s); }).length;
+  let tl = D.timeline.slice().sort((a, b) => b.from.localeCompare(a.from));
+  if (v.areas) tl = tl.slice().sort((a, b) => (a.type === 'edu') - (b.type === 'edu') || relevance(b) - relevance(a));
+
+  // Habilidades agrupadas por área
+  const areaIds = v.areas || D.areas.map(a => a.id).filter(id => id !== 'other');
+  const groups = areaIds.map(id => ({ a: D.areas.find(x => x.id === id), s: D.skills.filter(s => (s.areas || [])[0] === id || ((s.areas || []).includes(id) && v.areas && !v.areas.includes((s.areas || [])[0]))) }))
+    .filter(g => g.a && g.s.length);
+  const seen = new Set();
+  groups.forEach(g => { g.s = g.s.filter(s => !seen.has(s.id) && seen.add(s.id)).sort((a, b) => (b.level || 0) - (a.level || 0)); });
+
+  const projects = D.projects.filter(pr => pr.id !== 'cvweb' && (!v.areas || (pr.skills || []).some(id => { const s = D.skills.find(x => x.id === id); return s && inV(s); }))).slice(0, 4);
+  const other = D.skills.filter(s => (s.areas || []).includes('other'));
+
+  document.documentElement.lang = lang;
+  document.title = 'CV ' + L(v) + ' · ' + p.fullName;
+  document.getElementById('cv').innerHTML =
+    '<header class="head">' + (p.photo ? '<img class="ph" src="' + esc(p.photo) + '" alt="">' : '') +
+    '<div><div class="name">' + esc(p.name) + '<small>' + esc(L(p.say)) + '</small></div>' +
+    '<div class="full">' + esc(p.fullName) + '</div><div class="tag">' + esc(L(p.tagline)) + '</div>' +
+    '<div class="contact"><span><b>email:</b> ' + esc(m.email) + '</span><span><b>tel:</b> ' + esc(m.phone.join(' ')) + '</span>' +
+    '<span><b>' + T.web + ':</b> <a href="' + esc(m.siteUrl) + '">' + esc(site) + '</a></span>' +
+    (m.links.linkedin ? '<span><b>linkedin:</b> <a href="' + esc(m.links.linkedin.url) + '">' + esc(m.links.linkedin.label) + '</a></span>' : '') +
+    '<span>' + esc(L(p.facts[0])) + '</span></div></div></header>' +
+    '<div class="cols"><main>' +
+    '<section class="sec"><h2>' + T.profile + ' <i>{ }</i></h2><p class="summary">' + esc(L(p.summary)) + ' ' + esc(L(p.availability)) + '</p></section>' +
+    '<section class="sec"><h2>' + T.exp + ' <i>{</i></h2>' + tl.map(e =>
+      '<div class="job"><h3>' + esc(L(e.role)) + '</h3><div class="meta"><span class="org">' + esc(e.org) + '</span> · ' + esc(L(e.place)) + ' · ' + esc(range(e)) + '</div>' +
+      '<ul>' + (L(e.bullets) || []).map(b => '<li>' + esc(b) + '</li>').join('') + '</ul>' +
+      (e.events && e.events.length ? '<div class="ev">' + esc(e.events.map(x => x.name).join(' · ')) + '</div>' : '') + '</div>').join('') + '<h2><i>}</i></h2></section>' +
+    (projects.length ? '<section class="sec"><h2>' + T.projects + ' <i>{ }</i></h2>' + projects.map(pr => '<div class="proj"><b>' + esc(L(pr.title)) + '</b> (' + esc(pr.year) + ') · ' + esc(L(pr.abstract)) + '</div>').join('') + '</section>' : '') +
+    '</main><aside class="side">' +
+    '<section class="sec"><h2>' + T.skills + ' <i>{ }</i></h2>' + groups.map(g => '<div class="sk-g"><h3>' + esc(L(g.a)) + '</h3>' +
+      g.s.map(s => '<div class="sk"><span>' + esc(L(s.name)) + '</span><span>' + esc(lv(s.level)) + '</span></div>').join('') + '</div>').join('') + '</section>' +
+    '<section class="sec"><h2>' + esc(L(D.areas.find(a => a.id === 'other'))) + '</h2>' + other.map(s => '<p>' + esc(L(s.name)) + (s.note ? ' · ' + esc(L(s.note)) : '') + '</p>').join('') + '</section>' +
+    '</aside></div>' +
+    '<div class="foot"><span>' + T.full + ' ' + esc(site) + '</span><span>' + T.ver + ': ' + esc(L(v)) + ' · ' + T.updated + ' ' + esc(fmt(m.updated)) + '</span></div>';
+  await document.fonts.ready;
+  document.body.dataset.ready = '1';
+})();
+</script>
+</body>
+</html>
