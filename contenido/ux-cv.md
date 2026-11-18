@@ -1,6 +1,6 @@
-# CV web de Gio · Especificación UX (v1)
+# CV web de Gio · Especificación UX (v2)
 
-> 17/11/2026. Define estructura, comportamiento y contenido de cada parte de la página.
+> 18/11/2026. Define estructura, comportamiento y contenido de cada parte de la página.
 > El diseño visual (colores, tipografías, estilo) se decide después, en un documento aparte.
 > Leyenda: ✅ lo pediste tú · 💡 sugerencia mía (aceptar o descartar) · ❓ decisión pendiente
 
@@ -15,7 +15,8 @@
 | **Contenido** | Todo el texto (ES y EN), las experiencias, los proyectos y las habilidades viven en **un solo archivo de datos** (`data/cv.json`). Para cambiar un texto o un porcentaje se edita solo ese archivo, sin tocar el diseño. |
 | **Idiomas** | Español (por defecto) e inglés. La traducción al inglés la hago yo y tú la revisas. |
 | **Orden cronológico** | Inverso: lo más reciente arriba. Es el estándar que esperan los reclutadores. |
-| **URL** 💡 | Renombrar el repo `CV_02` → `gio-belmar.github.io` para que la dirección sea **https://gio-belmar.github.io** (más limpia que `/CV_02`). ❓ |
+| **URL** ✅ | Renombrar el repo `CV_02` → `gio-belmar.github.io`. La dirección queda **https://gio-belmar.github.io**. |
+| **Estadísticas** ✅ | Contador de visitas (ver punto 9.10). |
 
 ---
 
@@ -24,12 +25,13 @@
 **Escritorio (≥ 1024 px)**
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│ NAV:  Gio      Trayectoria · Proyectos · Contacto      [文A]  │
+│ NAV:  Gio   Trayectoria · Proyectos · CV · Contacto    [文A]  │
 ├───────────────┬──────────────────────────────────────────────┤
 │ PANEL LATERAL │  PORTADA (foto + nombre)                     │
 │ (habilidades) │  TRAYECTORIA (línea de tiempo)               │
 │  fijo al      │  PROYECTOS                                   │
-│  hacer scroll │  CONTACTO                                    │
+│  hacer scroll │  CV EN PDF                                   │
+│               │  CONTACTO                                    │
 ├───────────────┴──────────────────────────────────────────────┤
 │ PIE DE PÁGINA                                                │
 └──────────────────────────────────────────────────────────────┘
@@ -46,7 +48,7 @@
 
 - **Fija arriba** al hacer scroll.
 - Izquierda: **"Gio"** (al tocarlo vuelve arriba).
-- Enlaces: **Trayectoria · Proyectos · Contacto**. El enlace de la sección visible se marca como activo.
+- Enlaces: **Trayectoria · Proyectos · CV · Contacto**. El enlace de la sección visible se marca como activo.
 - Derecha: **botón de idioma**, un solo ícono de traducción (文A). Al tocarlo se despliega:
   - Español
   - English
@@ -61,18 +63,20 @@ Orden de arriba hacia abajo (en escritorio: foto a la izquierda, texto a la dere
 
 1. **Foto rectangular vertical**, proporción **4:5** (ej. 1200 × 1500 px). ✅
 2. **Gio**, grande.
-3. **Pronunciación fonética:** `/ˈdʒi.o/` · *"Yío"* ❓ confírmame cómo lo dices tú.
+3. **Pronunciación:** *"Yío"* · `/ˈʝi.o/` ✅
 4. **Giorgio Belmar Velásquez**, más chico, debajo.
 5. 💡 **Titular profesional** en una línea:
    *Visualista · Técnico audiovisual · Estudiante de Ingeniería Civil Acústica*
-6. 💡 **Ubicación:** Valdivia, Chile.
+6. ✅ **Datos rápidos** (fila de chips chicos, siempre visible):
+   `Valdivia, Chile` · `Disponible para viajar y trabajo remoto` · `Español nativo · Inglés intermedio` · `Licencia clase B`
+   Es donde un reclutador busca estos datos primero. Además se encuentran en el buscador del panel.
 7. 💡 **Perfil breve** (2–3 líneas) del resumen.
 8. 💡 **Herramientas fuertes:** fila de chips con las de 90–100 %:
    Ableton Live · OBS Studio · AutoCAD · SketchUp · DaVinci Resolve · Blender · Affinity · Photoshop · Claude Code
    Al tocar un chip, el panel lateral muestra esa habilidad.
-9. 💡 **Botones de acción:**
+9. **Botones de acción:**
    - **Contactar** (baja a Contacto)
-   - **Descargar CV (PDF)** (ver punto 9)
+   - **CV en PDF** (baja a la sección CV, punto 6b)
 
 ---
 
@@ -105,7 +109,8 @@ Orden de arriba hacia abajo (en escritorio: foto a la izquierda, texto a la dere
 2. Obando Sonido SpA · Técnico audiovisual / encargado de visuales / montajista · Valdivia y alrededores · dic 2024 – jul 2026
 3. Universidad Austral de Chile · Ingeniería Civil Acústica · Valdivia · 2022 – 2027 (en curso)
 4. Asprintec Ltda · Dibujante técnico de arquitectura · Puerto Montt · 2020 – presente
-5. ❓ Enseñanza media (colegio, ciudad, año): ¿va o no?
+
+Sin enseñanza media ✅. Pendiente: agregar trabajos de KLANG hechos a través de Obando (Gio revisa la información).
 
 ---
 
@@ -128,7 +133,7 @@ Orden de arriba hacia abajo (en escritorio: foto a la izquierda, texto a la dere
   - muestra resultados mientras se escribe.
 - **Cada resultado muestra:**
   - nombre y nivel (barra + etiqueta, ver 5.4);
-  - 💡 **dónde lo usé:** enlaces a las experiencias o proyectos donde aparece (ej. "OBS → Obando Sonido, LOOK AT FLOWERS"). Esto es lo que más le sirve a un empleador: la prueba, no solo el porcentaje.
+  - **"Dónde lo usé"** en una ventanita emergente (ver 5.7).
 - Si no hay resultados: *"No encontré eso. Prueba con otra palabra o escríbeme"* + enlace a Contacto.
 - Botón **✕** para limpiar la búsqueda y volver al carrusel.
 
@@ -157,18 +162,14 @@ Debajo del buscador, cuando no hay búsqueda activa.
   - Al tocar una habilidad del carrusel se abre su detalle ("dónde lo usé").
 - **Accesibilidad:** si el visitante tiene activado "reducir movimiento", no rota: se muestran todas las áreas como lista estática.
 
-### 5.4 Cómo se muestra el nivel 💡
-Un porcentaje solo es ambiguo para quien lo lee. Propongo **barra de 10 segmentos** (calza con tu escala de 10 en 10) + **etiqueta**:
+### 5.4 Cómo se muestra el nivel ✅
+**Barra de 10 segmentos + etiqueta. Sin número.** El porcentaje solo se usa internamente para dibujar la barra y ordenar.
 
-| % | Etiqueta ES | Etiqueta EN |
+| % interno | Etiqueta ES | Etiqueta EN |
 |---|---|---|
-| 90–100 | Experto | Expert |
-| 70–80 | Avanzado | Advanced |
-| 50–60 | Intermedio | Intermediate |
-| 30–40 | Básico | Basic |
-| 10–20 | Inicial | Beginner |
-
-❓ ¿Mostramos también el número (80 %) o solo barra + etiqueta?
+| 70–100 | Avanzado | Advanced |
+| 40–60 | Intermedio | Intermediate |
+| 10–30 | Principiante | Beginner |
 
 ### 5.5 Roles (no software)
 Los roles no se miden en %. 💡 Propongo mostrarlos con **años de experiencia** y **dónde**:
@@ -214,6 +215,13 @@ Cada habilidad tiene, en `data/cv.json`:
 | Español / Inglés | idiomas · languages |
 | Licencia clase B | conducir, vehículo, traslado de equipos · driver's license |
 
+### 5.7 Ventanita "Dónde lo usé" ✅
+- **Computador:** aparece al pasar el cursor sobre cualquier habilidad (en el panel, en el carrusel o en los chips de la portada). También con el foco del teclado.
+- **Celular** (no existe el cursor): aparece al tocar la habilidad y se cierra al tocar fuera.
+- **Contenido:** nombre de la habilidad, su etiqueta de nivel y la lista de experiencias/proyectos donde la usaste, cada uno como enlace.
+  Ej.: **OBS Studio** · Avanzado → *Obando Sonido SpA (2024–2026) · LOOK AT FLOWERS (2026)*
+- Al tocar un enlace, la página baja a esa experiencia o abre el proyecto.
+
 ---
 
 ## 6. Proyectos ✅
@@ -223,13 +231,13 @@ Filtro con pestañas arriba de la sección:
 
 - **Colectivos:** hechos en equipo.
   - LOOK AT FLOWERS
-  - Sitio web CEEICA ❓ (¿colectivo o personal?)
+  - Sitio web CEEICA ✅
 - **Personales**
   - **Herramientas:** software que desarrollas.
     - Herramienta de storyboard
     - Herramienta de broadcast / VJing / mapping
   - **Creativos:** obras y trabajos artísticos. 💡
-    - Visuales KLANG Masquerade (31/10/2026)
+    - Visuales KLANG Masquerade (31/10/2026, trabajo directo con KLANG)
     - Cortometraje
     - Producción musical (amotnto)
 
@@ -256,6 +264,29 @@ Filtro con pestañas arriba de la sección:
 
 ---
 
+## 6b. CV en PDF ✅
+
+Sección propia en la barra de navegación (**CV**).
+
+- Título: **¿Necesitas mi CV en PDF?**
+- Subtítulo: *Elige la versión que más se acerque a lo que buscas.*
+- **Tarjetas de versión** (cada una con botón **Español** y **English**):
+
+| Versión | Enfoque | Qué incluye |
+|---|---|---|
+| **Completo** | Todo | Toda la trayectoria y todas las habilidades. |
+| **Audiovisual y visuales** | VJing, pantallas LED, broadcast, edición, 3D | Obando (énfasis en visuales, LED, cámaras), LOOK AT FLOWERS (video y pantallas), KLANG, cortometraje. |
+| **Sonido y acústica** | Audio en vivo, producción musical, acústica | Obando (énfasis en audio y montaje), Ingeniería Civil Acústica, EASE/REW, Ableton, Reaper. |
+| **Diseño y comunicación** | Identidad visual, diseño gráfico, redes, web | LOOK AT FLOWERS (marca, posts, dossier, web), CEEICA, Affinity, Photoshop. |
+| **Dibujo técnico y arquitectura** | CAD y planimetría | Asprintec, AutoCAD, SketchUp. |
+| **Producción de eventos** | Organización, montaje, logística | LOOK AT FLOWERS (organización, patrocinios, cotizaciones, diseño del recinto), Obando (montaje, Layher, logística). |
+
+- Los 12 PDF (6 versiones × 2 idiomas) **se generan automáticamente** desde el mismo archivo de datos, filtrando por área. Si cambias algo en la web, los PDF se actualizan solos al publicar.
+- Formato del PDF: 1–2 páginas tamaño carta, sobrio, legible por portales de empleo (texto real, no imagen), con foto, contacto y link a la web.
+- Debajo de las tarjetas: *¿Buscas otro enfoque? Escríbeme* → Contacto.
+
+---
+
 ## 7. Contacto ✅
 
 Sección en la página y también accesible desde la barra de navegación.
@@ -268,7 +299,7 @@ Sección en la página y también accesible desde la barra de navegación.
 | **LinkedIn** | Giorgio Belmar Velásquez |
 | **SoundCloud** | ❓ amotnto o giorgio-belmar-velasquez |
 
-💡 Una línea arriba: **"Disponible para eventos, producciones y proyectos audiovisuales · Valdivia y sur de Chile"**. ❓ ¿Estás disponible para viajar o trabajar remoto?
+Una línea arriba: **"Disponible para eventos, producciones y proyectos audiovisuales. Base en Valdivia, con disponibilidad para viajar y trabajo remoto."** ✅
 
 ---
 
@@ -276,8 +307,8 @@ Sección en la página y también accesible desde la barra de navegación.
 
 En columnas (en celular, una debajo de otra):
 1. **Gio** · Giorgio Belmar Velásquez · Valdivia, Chile.
-2. **Secciones:** Trayectoria · Proyectos · Habilidades · Contacto.
-3. **Funciones:** Buscar habilidades · Descargar CV (PDF) · Cambiar idioma.
+2. **Secciones:** Trayectoria · Proyectos · Habilidades · CV en PDF · Contacto.
+3. **Funciones:** Buscar habilidades · Descargar CV en PDF · Cambiar idioma.
 4. **Redes:** correo, WhatsApp (mismo botón de mostrar número), Instagram, LinkedIn, SoundCloud.
 5. Última línea: *Última actualización: [mes año]* · © 2026 Giorgio Belmar Velásquez.
 
@@ -286,28 +317,30 @@ En columnas (en celular, una debajo de otra):
 ## 9. Cosas que faltaban (no evidentes) 💡
 
 1. **CV en PDF descargable.** Muchos empleadores y portales piden un PDF para adjuntarlo. Propongo generarlo automáticamente desde el mismo contenido (ES y EN), para que no haya que mantener dos versiones.
-2. **Vista previa al compartir el link.** Cuando mandes el link por WhatsApp o LinkedIn, que aparezca una tarjeta con tu foto, "Gio · Visualista y técnico audiovisual" y una descripción, no un link pelado.
+2. **Vista previa al compartir el link** ✅ (propuesta):
+   - **Imagen** 1200 × 630 px: tu foto a la izquierda; a la derecha "Gio", "Yío" en chico, "Giorgio Belmar Velásquez" y "Visualista · Técnico audiovisual · Ing. Civil Acústica (en curso)", con los colores del diseño final.
+   - **Título:** Gio · Visualista y técnico audiovisual
+   - **Descripción:** Visuales en vivo, pantallas LED, broadcast, sonido y diseño para eventos. Valdivia, Chile.
+   - Versión en inglés con los mismos campos traducidos.
+   - Cada proyecto tiene su propia vista previa (portada + nombre del proyecto).
 3. **Comportamiento en celular** del panel lateral (punto 1). La mayoría va a abrir tu CV desde el teléfono.
 4. **Perfil breve en la portada** (punto 3.7). Un empleador decide en ~10 segundos; el párrafo le dice quién eres antes de leer la línea de tiempo.
 5. **"Dónde lo usé"** en cada habilidad (punto 5.2). Conecta el porcentaje con evidencia real.
 6. **Peso de fotos y videos.** Las fotos de eventos se convierten a WebP y se cargan solo cuando aparecen en pantalla. GitHub no acepta archivos de más de 100 MB, así que los videos largos van en YouTube o Vimeo.
-7. **Idiomas y licencia de conducir.** No tenían lugar definido: propongo una tarjeta "Datos" al final de Trayectoria (Español nativo · Inglés intermedio · Licencia clase B desde 2022), y que además aparezcan en el buscador.
+7. **Idiomas, licencia y disponibilidad** ✅: van como "datos rápidos" en la portada (punto 3.6) y también se encuentran en el buscador.
 8. **Modo claro / oscuro.** ❓ Se decide con el diseño visual. Para un visualista, un modo oscuro como base puede quedar bien.
 9. **Accesibilidad:** todo se puede usar con teclado, buen contraste, textos alternativos en las fotos y el carrusel respeta "reducir movimiento".
-10. **Estadísticas de visitas** (opcional). ❓ ¿Quieres saber cuánta gente ve tu CV? Se puede con Google Analytics, como en la web del festival.
+10. **Estadísticas de visitas** ✅. Propuesta: **GoatCounter** (gratis, sin cookies, no necesita aviso de cookies y es más simple que Google Analytics). Muestra visitas por día, desde qué país, desde dónde llegaron (LinkedIn, WhatsApp…) y qué PDF descargaron. ❓ O Google Analytics si prefieres el mismo de la web del festival.
 11. **Cómo actualizar sin Claude Code.** Te dejo una guía corta en el README: qué archivo editar para cada cosa y cómo subir fotos.
 
 ---
 
 ## 10. Pendientes para empezar a construir
 
-- [ ] Confirmar la pronunciación de "Gio"
-- [ ] ¿Renombramos el repo a `gio-belmar.github.io`?
-- [ ] ¿Se muestra el % junto a la barra o solo barra + etiqueta?
-- [ ] ¿CEEICA es colectivo o personal?
-- [ ] ¿Va la enseñanza media?
-- [ ] ¿Disponible para viajar / remoto?
-- [ ] ¿Estadísticas de visitas?
+- [ ] Renombrar el repo a `gio-belmar.github.io` (lo haces tú en GitHub, ver chat)
+- [ ] Estadísticas: GoatCounter o Google Analytics
+- [ ] Perfil breve de la portada: ¿te sirve el texto del resumen?
+- [ ] Trabajos de KLANG a través de Obando
 - [ ] Foto de perfil 4:5
 - [ ] Fotos, videos y proyecto de KLANG Masquerade
 - [ ] Criterios de diseño visual
