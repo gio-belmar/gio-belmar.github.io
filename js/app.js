@@ -408,20 +408,49 @@
   }
   function renderCarousel() {
     const el = $('#carousel'); const n = D.carousel.length;
+    const order = Array.from({ length: n }, (_, k) => (S.car + k) % n);
+    const block = i => '<div class="car-g" data-g="' + i + '"><h3><b>' + esc(L(D.carousel[i])) + '</b>: [ ]</h3><div class="car-body">' + carGroup(i) + '</div></div>';
     if (reduceMotion) {
       el.classList.add('static');
-      el.innerHTML = '<div class="car-all">' + D.carousel.map((g, i) => '<div><h3>' + esc(L(g)) + ': [ ]</h3><div class="car-body">' + carGroup(i) + '</div></div>').join('') + '</div>';
+      el.innerHTML = '<div class="car-track">' + order.map(block).join('') + '</div>';
       return;
     }
-    const g = D.carousel[S.car];
-    el.innerHTML = '<div class="car-h"><span><b>' + esc(L(g)) + '</b>: [ ]</span><span class="car-nav">' +
-      '<button type="button" data-car="-1" aria-label="' + esc(t('car.prev')) + '">↑</button><span class="car-pos">' + (S.car + 1) + ' / ' + n + '</span>' +
-      '<button type="button" data-car="1" aria-label="' + esc(t('car.next')) + '">↓</button></span></div><div class="car-body" aria-live="off">' + carGroup(S.car) + '</div>';
+    el.innerHTML = '<div class="car-h"><span class="car-pos">' + (S.car + 1) + ' / ' + n + '</span><span class="car-nav">' +
+      '<button type="button" data-car="-1" aria-label="' + esc(t('car.prev')) + '">↑</button>' +
+      '<button type="button" data-car="1" aria-label="' + esc(t('car.next')) + '">↓</button></span></div>' +
+      '<div class="car-view"><div class="car-track">' + order.map(block).join('') + '</div></div>';
+    markTop();
     $$('[data-car]', el).forEach(b => b.addEventListener('click', () => stepCarousel(+b.dataset.car)));
   }
+  function markTop() {
+    const track = $('#carousel .car-track'); if (!track) return;
+    $$('.car-g', track).forEach((g, k) => g.classList.toggle('on', k === 0));
+    const pos = $('#carousel .car-pos'); if (pos) pos.textContent = (S.car + 1) + ' / ' + D.carousel.length;
+  }
+  let carBusy = false;
   function stepCarousel(d) {
-    const n = D.carousel.length; S.car = (S.car + d + n) % n; renderCarousel();
-    const b = $('#carousel .car-body'); if (b) { b.classList.remove('swap'); void b.offsetWidth; b.classList.add('swap'); }
+    const track = $('#carousel .car-track'); if (!track || carBusy) return;
+    const n = D.carousel.length; S.car = (S.car + d + n) % n;
+    const gap = parseFloat(getComputedStyle(track).rowGap) || 0;
+    carBusy = true;
+    if (d > 0) {
+      const first = track.firstElementChild; const h = first.offsetHeight + gap;
+      first.classList.remove('on'); if (first.nextElementSibling) first.nextElementSibling.classList.add('on');
+      track.style.transition = 'transform .7s cubic-bezier(.4,0,.2,1)';
+      track.style.transform = 'translateY(' + (-h) + 'px)';
+      setTimeout(() => {
+        track.style.transition = 'none'; track.appendChild(first); track.style.transform = 'none';
+        void track.offsetHeight; carBusy = false; markTop();
+      }, 720);
+    } else {
+      const last = track.lastElementChild; track.style.transition = 'none';
+      track.insertBefore(last, track.firstElementChild);
+      const h = last.offsetHeight + gap;
+      track.style.transform = 'translateY(' + (-h) + 'px)'; void track.offsetHeight;
+      markTop();
+      track.style.transition = 'transform .7s cubic-bezier(.4,0,.2,1)'; track.style.transform = 'none';
+      setTimeout(() => { track.style.transition = 'none'; carBusy = false; }, 720);
+    }
   }
   function startCarousel() {
     if (reduceMotion || S.carTimer) return;

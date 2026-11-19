@@ -158,18 +158,24 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .bar i { height: 5px; background: var(--line); border-radius: 1px; }
 .bar i.f { background: var(--blue); }
 
-.car { border: 1px solid var(--line); border-radius: 6px; background: var(--bg); padding: 12px; display: grid; gap: 8px; }
-.car-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-family: var(--mono); font-size: .78rem; color: var(--muted); }
-.car-h b { color: var(--pink); font-weight: 500; }
-.car-nav { display: flex; gap: 4px; align-items: center; }
+.car { display: flex; flex-direction: column; gap: 8px; flex: 1 1 auto; min-height: 220px; }
+.car-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-family: var(--mono); font-size: .75rem; color: var(--muted); }
+.car-nav { display: flex; gap: 4px; }
 .car-nav button { border: 1px solid var(--line2); background: var(--panel); border-radius: 3px; width: 26px; height: 24px; cursor: pointer; font-size: .75rem; color: var(--fg); }
-.car-pos { font-variant-numeric: tabular-nums; min-width: 42px; text-align: center; }
+.car-pos { font-variant-numeric: tabular-nums; }
+.car-view {
+  flex: 1 1 auto; min-height: 0; overflow: hidden; position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent);
+}
+.car-track { display: grid; gap: 12px; will-change: transform; }
+.car-g { border: 1px solid transparent; border-radius: 6px; padding: 10px 12px; opacity: .38; transition: opacity .5s, background .5s, border-color .5s; }
+.car-g.on { opacity: 1; background: var(--bg); border-color: var(--line); }
+.car-g:hover, .car-g:focus-within { opacity: 1; }
+.car-g h3 { margin: 0 0 4px; font-family: var(--mono); font-size: .78rem; font-weight: 400; color: var(--muted); }
+.car-g h3 b { color: var(--pink); font-weight: 500; }
 .car-body { display: grid; gap: 2px; }
-.car-body.swap { animation: swap .4s ease; }
-@keyframes swap { from { transform: translateY(12px); opacity: .15; } to { transform: none; opacity: 1; } }
-.car.static .car-nav { display: none; }
-.car-all { display: grid; gap: 14px; }
-.car-all h3 { margin: 0; font-family: var(--mono); font-size: .78rem; color: var(--pink); font-weight: 500; }
+.car.static .car-g { opacity: 1; }
 
 /* ---------- Contenido ---------- */
 .main { position: relative; min-width: 0; padding: 32px max(16px, env(safe-area-inset-right, 0px)) 64px calc(var(--gut-w) + 32px); }
@@ -341,6 +347,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
     transform: translateY(105%); transition: transform .28s ease; visibility: hidden;
   }
   .side.open { transform: none; visibility: visible; }
+  .car { flex: none; height: 52vh; height: 52dvh; }
   .side-in { max-height: inherit; padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(24px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
   .side-in::before { content: ""; width: 40px; height: 4px; background: var(--line2); border-radius: 2px; align-self: center; margin: -6px 0 2px; }
   .scrim { display: block; position: fixed; inset: 0; background: rgba(5, 8, 14, .45); z-index: 65; }
