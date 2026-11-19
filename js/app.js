@@ -196,7 +196,7 @@
   function renderHero() {
     const p = D.profile;
     const photo = p.photo
-      ? '<div class="photo has-img"><img src="' + esc(p.photo) + '" alt="' + esc(p.fullName) + '" width="400" height="500"></div>'
+      ? '<div class="photo has-img"><img src="' + esc(p.photo) + '" alt="' + esc(p.fullName) + '"></div>'
       : '<div class="photo" role="img" aria-label="' + esc(t('photo.ph')) + '">' + esc(t('photo.ph')) + '</div>';
     const tops = D.skills.filter(s => s.top).map(s => '<button type="button" class="chip" data-skill="' + s.id + '">' + esc(L(s.name)) + '</button>').join('');
     $('#hero').innerHTML = photo +

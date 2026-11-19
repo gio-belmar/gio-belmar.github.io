@@ -61,7 +61,7 @@
 
 Orden de arriba hacia abajo (en escritorio: foto a la izquierda, texto a la derecha):
 
-1. **Foto rectangular vertical**, proporción **4:5** (ej. 1200 × 1500 px). ✅
+1. **Foto vertical en su proporción original** (sin recorte). ✅
 2. **Gio**, grande.
 3. **Pronunciación:** *"Yío"* · `/ˈʝi.o/` ✅
 4. **Giorgio Belmar Velásquez**, más chico, debajo.

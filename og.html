@@ -11,7 +11,7 @@ html, body { margin: 0; }
 body { width: 1200px; height: 630px; background: #f7f8fa; font-family: "IBM Plex Sans", sans-serif; color: #111827; display: grid; grid-template-columns: 64px 1fr; overflow: hidden; }
 .gut { background: #eef0f4; color: #a3a9b6; font: 400 15px/36px "IBM Plex Mono", monospace; text-align: right; padding: 40px 12px 0 0; white-space: pre; }
 .in { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center; padding: 0 72px 0 64px; }
-.ph { width: 300px; height: 375px; border: 2px solid #c9ced8; border-radius: 6px; object-fit: cover;
+.ph { width: 290px; height: 375px; border: 2px solid #c9ced8; border-radius: 6px; object-fit: cover;
   background: repeating-linear-gradient(0deg,#e1e4ea 0 1px,transparent 1px 18px), repeating-linear-gradient(90deg,#e1e4ea 0 1px,#fff 1px 18px); }
 .brand { font: 500 26px "IBM Plex Mono", monospace; } .brand b { color: #2747d6; font-weight: 500; }
 h1 { font-size: 150px; line-height: .85; margin: 18px 0 8px; font-weight: 600; letter-spacing: -.04em; }
@@ -52,7 +52,7 @@ h1 { font-size: 150px; line-height: .85; margin: 18px 0 8px; font-weight: 600; l
 </div>
 <script>
 fetch('data/cv.json').then(r => r.json()).then(async D => {
-  if (D.profile.photo) document.getElementById('ph').innerHTML = '<img class="ph" src="' + D.profile.photo + '" alt="">';
+  if (D.profile.photo) document.getElementById('ph').innerHTML = '<img class="ph" style="height:auto;width:290px;max-height:540px" src="' + D.profile.photo + '" alt="">';
   await document.fonts.ready;
   const img = document.querySelector('#ph img');
   if (img && !img.complete) await new Promise(r => { img.onload = img.onerror = r; });
