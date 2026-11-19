@@ -208,7 +208,8 @@
       '<p class="summary">' + esc(L(p.summary)) + '<span class="cur blink" aria-hidden="true" style="display:inline-block;width:2px;height:1em;background:var(--blue);margin-left:3px;vertical-align:-2px"></span></p>' +
       '<div class="facts">' + p.facts.map(f => '<span class="fact">' + esc(L(f)) + '</span>').join('') + '</div>' +
       '<p class="tops-l">' + esc(t('hero.tops')) + '</p><div class="tops">' + tops + '</div>' +
-      '<div class="ctas"><a class="btn primary" href="#contacto">' + esc(t('hero.contact')) + '</a><a class="btn" href="#cv">' + esc(t('hero.cv')) + '</a></div>' +
+      (p.pitch ? '<div class="pitch-s"><p><b>' + esc(L(p.pitch.title)) + '</b> ' + esc(L(p.pitch.short)) + '</p></div>' : '') +
+      '<div class="ctas"><a class="btn primary" href="#contacto">' + esc(p.pitch ? L(p.pitch.cta) : t('hero.contact')) + ' →</a><a class="btn" href="#cv">' + esc(t('hero.cv')) + '</a></div>' +
       '</div>';
   }
 
@@ -291,7 +292,9 @@
     return rows;
   }
   function renderContact() {
-    $('#availability').textContent = L(D.profile.availability);
+    const pi = D.profile.pitch;
+    $('#availability').innerHTML = (pi ? '<span class="pitch-t">' + esc(L(pi.title)) + '</span>' + L(pi.body).map(x => '<span class="pitch-p">' + esc(x) + '</span>').join('') : '') +
+      '<span class="pitch-a">' + esc(L(D.profile.availability)) + '</span>';
     $('#contact').innerHTML = contactRows(false).map(([k, v]) => '<dt>' + esc(t(k)) + '</dt><dd>' + v + '</dd>').join('');
   }
   function initContactActions() {
